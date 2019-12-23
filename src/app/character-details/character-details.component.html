@@ -1,0 +1,62 @@
+<div class="detail-wrapper">
+  <p>
+    More information about Character:
+    <strong>{{character.name}}</strong>
+  </p>
+
+  <mat-card class="detail__card">
+    <mat-card-header>
+      <div mat-card-avatar
+           [ngStyle]="{'background-image':' url(' + character.image + ')'}"
+           class="detail__header-avatar">
+      </div>
+      <mat-card-title>
+        {{character.name}}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{character.status}}. Created: {{character.created | date: 'EEEE, MMMM d, y'}}
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="character.image" alt="avatar">
+
+    <mat-card-content>
+      <p>
+        <strong>Gender:</strong> {{character.gender}} |
+        <strong>Species:</strong> {{character.species}}
+      </p>
+
+      <p>
+        <strong>Origin location:</strong>
+        {{character.origin.name}}
+      </p>
+
+      <p>
+        <strong>Last known location endpoint:</strong>
+        {{character.location.name}}
+      </p>
+
+      <div>
+        <strong>List of episodes:</strong>
+        <ul>
+          <li *ngFor="let episode of character.episode">
+            <a class="detail__link" [href]="episode">
+              {{episode}}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button
+              color="primary"
+              (click)="goBack()"
+      >Go Back
+      </button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>
+

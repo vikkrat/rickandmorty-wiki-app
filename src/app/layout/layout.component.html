@@ -1,0 +1,48 @@
+<main class="layout-wrapper">
+
+  <div class="layout-container">
+    <div class="layout-container__border-outside">
+      <div>
+        <div class="layout-container__badge">
+          25
+        </div>
+        <h1 class="layout__title">
+          Обучение по продажам
+        </h1>
+        <p class="layout__graph">
+          Вы сделали 13 продаж и заработали:
+        </p>
+        <p class="layout__graph-money">
+          $ 2 000
+        </p>
+
+        <div class="progress-wrapper">
+          <h2 class="progress__title">
+            Месячный план выполнен на
+          </h2>
+
+          <div style="position:relative;">
+            <mat-progress-bar mode="determinate"
+                              [value]="progress"
+                              class="progress-bar">
+            </mat-progress-bar>
+            <div style="position:absolute; top: -6.5px; left: 107px;">
+              <span class="progress-percent">
+                {{progress}}%
+              </span>
+            </div>
+          </div>
+
+          <button type="button"
+                  class="progress__btn"
+                  (click)="initProgress()"
+          >Продолжить
+          </button>
+            <span class="progress__graph">
+              Осталось 8 дней
+            </span>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>

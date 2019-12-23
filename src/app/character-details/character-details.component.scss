@@ -1,0 +1,23 @@
+.detail {
+  &-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__card {
+    max-width: 400px;
+  }
+  &__header-avatar {
+    background-image: url('https://rickandmorty-prod.s3.amazonaws.com/uploads/1562092058484_M94.jpg');
+    background-size: cover;
+  }
+  &__link {
+    text-decoration: none;
+    color: honeydew;
+    &:visited {
+      color: aquamarine;
+    }
+  }
+}

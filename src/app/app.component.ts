@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'tagsoft-test-app';
+  title = 'Wiki-App of Rick & Morty Animated Series Characters';
 }
